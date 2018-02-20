@@ -14,6 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/page', function () {
+    echo "HELLO WORLD";
+});
+
 Route::get('/myview', function () {
     return view('myview');
 });
+
+Route::get('/about', 'Testcontroller@show');

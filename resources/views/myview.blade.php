@@ -47,6 +47,8 @@
 
         .title {
             font-size: 84px;
+            color: red;
+            font-weight: bold;
         }
 
         .links > a {
@@ -79,7 +81,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            MY FIRST VIEW
+            HELLO WORLD
         </div>
     </div>
 </div>
