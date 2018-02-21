@@ -23,4 +23,4 @@ Route::get('/myview', function () {
     return view('myview');
 });
 
-Route::get('/about', 'Testcontroller@show');
+Route::get('/hello', 'Testcontroller@show');
