@@ -24,3 +24,9 @@ Route::get('/myview', function () {
 });
 
 Route::get('/hello', 'Testcontroller@show');
+
+Route::resource('/admin', 'PostController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
