@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -13,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-       return view('admin.post.index');
+//       return view('admin.post.index');
+		$posts = Post::all();
+		return view('admin.post.index', compact('posts'));
     }
 
     /**
@@ -34,7 +37,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Post::create($request->all());
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -56,7 +60,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+    	$post = Post::find($id);
+		return view('admin.post.edit', compact('post'));
     }
 
     /**

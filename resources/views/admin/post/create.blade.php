@@ -1,18 +1,18 @@
+@extends("admin.post.index")
+@section("title", "создать пост")
+@section("page_content")
+{!! Form::open(['route' => 'admin.store']) !!}
 
-{!! Form::open(['url' => 'foo/bar']) !!}
+<div class="form-group">
+{{Form::label('title', 'Title')}}
+{{Form::text('title', null, ['class' => 'form-control'])}}
+</div>
+<div class="form-group">
+    {{Form::label('content', 'Content')}}
+    {{Form::text('content', null, ['class' => 'form-control'])}}
+</div>
 
-{{Form::label('username', 'User name')}}
-{{Form::text('username')}}</br></br>
-
-{{Form::label('email', 'E-Mail Address')}}
-{{Form::text('email', 'example@gmail.com')}}</br></br>
-
-{{Form::label('password', 'password')}}
-{{Form::password('password', ['class' => 'awesome'])}}</br></br>
-
-{{Form::label('confirmPassword', 'Confirm password')}}
-{{Form::password('confirmPassword', ['class' => 'awesome'])}}</br></br>
-
-{{Form::submit('Зарегистрироваться')}}
+{{Form::submit('создать пост')}}
 
 {!! Form::close() !!}
+@endsection
