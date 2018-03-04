@@ -74,6 +74,10 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         //
+		$post = Post::find($id);
+		$post->update($request->all());
+//		dd($request->all());
+		return redirect()->route('admin.index');
     }
 
     /**
@@ -85,5 +89,9 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+		$post = Post::find($id);
+		$post->delete;
+//		dd($request->all());
+		return redirect()->route('admin.index');
     }
 }

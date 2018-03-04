@@ -1,7 +1,7 @@
 @extends("admin.post.index")
 @section("title", "создать пост")
 @section("page_content")
-    {!! Form::model($post, ['route' => 'admin.store', $post->id]) !!}
+    {!! Form::model($post, array('route' => array('admin.update', $post->id), 'method' => 'PUT')) !!}
 
     <div class="form-group">
         {{Form::label('title', 'Title')}}
