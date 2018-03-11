@@ -11,12 +11,17 @@
         {{Form::text('title', null, ['class' => 'form-control'])}}
     </div>
     <div class="form-group">
-    {{ Form::label('content', 'Content')}}
-    {{Form::text('content', null, ['class' => 'form-control'])}}
-</div>
+        {{ Form::label('content', 'Content')}}
+        {{Form::text('content', null, ['class' => 'form-control'])}}
+    </div>
 
-{{Form::submit('Редактировать пост', ['class' => 'btn btn-primary'])}}
+    <div class="form-group">
+        {{ Form::label('category_id', 'Category')}}
+        {{Form::text('category_id', null, ['class' => 'form-control'])}}
+    </div>
 
-{!! Form::close() !!}
+    {{Form::submit('Редактировать пост', ['class' => 'btn btn-primary'])}}
+
+    {!! Form::close() !!}
 
 @endsection

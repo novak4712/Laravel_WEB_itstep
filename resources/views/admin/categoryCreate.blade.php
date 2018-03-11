@@ -1,6 +1,6 @@
 @extends('admin.index')
 
-@section('title', 'Создать пост')
+@section('title', 'Создать категорию')
 
 @section('page_content')
 
@@ -15,7 +15,7 @@
 
     @endif
 
-    {!! Form::open(['route' => 'admin.store']) !!}
+    {!! Form::open(['route' => 'category.store']) !!}
 
     <div class="form-group">
         {{Form::label('title', 'Title')}}
@@ -26,12 +26,9 @@
         {{Form::text('content', null, ['class' => 'form-control'])}}
     </div>
 
-    <div class="form-group">
-        {{Form::label('category', 'Category')}}
-        {{Form::select('category_id', $category, ['class' => 'form-control'])}}
-    </div>
 
-    {{Form::submit('Создать пост', ['class' => 'btn btn-primary'])}}
+
+    {{Form::submit('Создать категорию', ['class' => 'btn btn-primary'])}}
 
     {!! Form::close() !!}
 

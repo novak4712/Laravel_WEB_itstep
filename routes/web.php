@@ -26,7 +26,7 @@ Route::get('/myview', function () {
 Route::get('/hello', 'Testcontroller@show');
 
 Route::resource('/admin', 'PostController');
-
+Route::resource('/category', 'CategoryController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
